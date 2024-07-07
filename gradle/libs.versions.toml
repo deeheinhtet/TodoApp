@@ -1,9 +1,9 @@
 [versions]
-androidGradlePlugin = "8.4.0"
+androidGradlePlugin = "8.4.2"
 androidxCore = "1.13.1"
-androidxLifecycle = "2.7.0"
+androidxLifecycle = "2.8.3"
 androidxActivity = "1.9.0"
-androidxComposeBom = "2024.05.00"
+androidxComposeBom = "2024.06.00"
 androidxComposeCompiler = "1.5.14"
 androidxHilt = "1.2.0"
 androidxNavigation = "2.7.7"
@@ -12,10 +12,13 @@ androidxTest = "1.5.0"
 androidxTestExt = "1.1.5"
 androidxTestRunner = "1.5.2"
 coroutines = "1.8.1"
+gson = "2.11.0"
 hilt = "2.51.1"
 junit = "4.13.2"
 kotlin = "1.9.24"
+kotlinxSerializationJson = "1.6.3"
 ksp = "1.9.24-1.0.20"
+threetenabp = "1.4.7"
 
 [libraries]
 androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidxCore" }
@@ -39,6 +42,7 @@ androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref =
 androidx-test-core = { module = "androidx.test:core", version.ref = "androidxTest" }
 androidx-test-ext-junit = { module = "androidx.test.ext:junit", version.ref = "androidxTestExt" }
 androidx-test-runner = { module = "androidx.test:runner", version.ref = "androidxTestRunner" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
 hilt-android-testing = { module = "com.google.dagger:hilt-android-testing", version.ref = "hilt" }
@@ -46,6 +50,8 @@ hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hil
 hilt-gradle-plugin = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "hilt" }
 junit = { module = "junit:junit", version.ref = "junit" }
 kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+threetenabp = { module = "com.jakewharton.threetenabp:threetenabp", version.ref = "threetenabp" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }

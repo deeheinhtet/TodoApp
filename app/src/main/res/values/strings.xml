@@ -15,5 +15,27 @@
   -->
 
 <resources>
-    <string name="app_name">MyApplication</string>
+    <string name="app_name">Todo App</string>
+    <string name="label_mark_complete">Mark as complete</string>
+    <string name="label_your_task">Your Tasks</string>
+    <string name="content_description_modify_todo">Modify Todo Button</string>
+    <string name="content_description_add_todo">"Add Todo"</string>
+    <string name="content_description_edit_todo">"Edit Todo"</string>
+    <string name="label_unfinished_task_description">You have %s unfinished task, please go try to finish today.</string>
+    <string name="action_label_delete">Delete</string>
+    <string name="action_label_edit">Edit</string>
+    <string name="label_empty_todo">There is no tasks.</string>
+    <string name="label_todo_title">Todo Title</string>
+    <string name="label_todo_description">Todo Description</string>
+    <string name="hint_label_input_todo_title">Input your todo title</string>
+    <string name="hint_label_input_todo_description">Input your todo description</string>
+    <string name="action_label_save">Save</string>
+    <string name="label_add_new_todo">Add New Todo</string>
+    <string name="label_edit_todo">Edit Todo</string>
+    <string name="label_todo_deleted_success">Todo Successfully Deleted.</string>
+    <string name="label_todo_created_success">Todo Successfully Created.</string>
+    <string name="label_todo_updated_success">Todo Successfully Updated.</string>
+    <string name="label_todo_created_mark_action">Todo Marked As %s</string>
+    <string name="label_completed">Completed</string>
+    <string name="label_uncompleted">Uncompleted</string>
 </resources>

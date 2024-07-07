@@ -14,25 +14,16 @@
  * limitations under the License.
  */
 
-package android.template.testdi
+package com.dee.todoapp
 
-import dagger.Binds
-import dagger.Module
-import dagger.hilt.components.SingletonComponent
-import dagger.hilt.testing.TestInstallIn
-import com.dee.todoapp.data.MyModelRepository
-import com.dee.todoapp.data.di.DataModule
-import com.dee.todoapp.data.di.FakeMyModelRepository
+import android.app.Application
+import com.jakewharton.threetenabp.AndroidThreeTen
+import dagger.hilt.android.HiltAndroidApp
 
-@Module
-@TestInstallIn(
-    components = [SingletonComponent::class],
-    replaces = [DataModule::class]
-)
-interface FakeDataModule {
-
-    @Binds
-    abstract fun bindRepository(
-        fakeRepository: FakeMyModelRepository
-    ): MyModelRepository
+@HiltAndroidApp
+class TodoApp : Application() {
+    override fun onCreate() {
+        super.onCreate()
+        AndroidThreeTen.init(this)
+    }
 }

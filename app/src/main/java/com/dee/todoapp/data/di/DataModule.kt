@@ -14,25 +14,23 @@
  * limitations under the License.
  */
 
-package android.template.testdi
+package com.dee.todoapp.data.di
 
+import com.dee.todoapp.data.repository.DefaultTodoRepository
+import com.dee.todoapp.data.repository.TodoRepository
 import dagger.Binds
 import dagger.Module
+import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import dagger.hilt.testing.TestInstallIn
-import com.dee.todoapp.data.MyModelRepository
-import com.dee.todoapp.data.di.DataModule
-import com.dee.todoapp.data.di.FakeMyModelRepository
+import javax.inject.Singleton
 
 @Module
-@TestInstallIn(
-    components = [SingletonComponent::class],
-    replaces = [DataModule::class]
-)
-interface FakeDataModule {
+@InstallIn(SingletonComponent::class)
+interface DataModule {
 
+    @Singleton
     @Binds
-    abstract fun bindRepository(
-        fakeRepository: FakeMyModelRepository
-    ): MyModelRepository
+    fun bindsTodoRepository(
+        todoRepository: DefaultTodoRepository,
+    ): TodoRepository
 }

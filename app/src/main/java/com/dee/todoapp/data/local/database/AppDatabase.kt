@@ -14,25 +14,22 @@
  * limitations under the License.
  */
 
-package android.template.testdi
+package com.dee.todoapp.data.local.database
 
-import dagger.Binds
-import dagger.Module
-import dagger.hilt.components.SingletonComponent
-import dagger.hilt.testing.TestInstallIn
-import com.dee.todoapp.data.MyModelRepository
-import com.dee.todoapp.data.di.DataModule
-import com.dee.todoapp.data.di.FakeMyModelRepository
+import androidx.room.Database
+import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
+import com.dee.todoapp.data.local.database.converter.DateConverter
+import com.dee.todoapp.data.local.database.dao.TodoDao
+import com.dee.todoapp.data.local.database.entity.TodoItemModel
 
-@Module
-@TestInstallIn(
-    components = [SingletonComponent::class],
-    replaces = [DataModule::class]
-)
-interface FakeDataModule {
+@Database(entities = [TodoItemModel::class], version = 1)
+@TypeConverters(DateConverter::class)
+abstract class AppDatabase : RoomDatabase() {
+    abstract fun todoDao(): TodoDao
 
-    @Binds
-    abstract fun bindRepository(
-        fakeRepository: FakeMyModelRepository
-    ): MyModelRepository
+
+    companion object {
+        const val APP_DATABASE_NAME = "com.dee.todo_database"
+    }
 }

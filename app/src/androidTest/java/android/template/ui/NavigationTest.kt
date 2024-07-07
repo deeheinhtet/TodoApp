@@ -22,7 +22,8 @@ import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
 import org.junit.Rule
 import org.junit.Test
-import android.template.data.di.fakeMyModels
+import com.dee.todoapp.data.di.fakeMyModels
+import com.dee.todoapp.ui.TodoApp
 
 @HiltAndroidTest
 class NavigationTest {
@@ -31,7 +32,7 @@ class NavigationTest {
     var hiltRule = HiltAndroidRule(this)
 
     @get:Rule(order = 1)
-    val composeTestRule = createAndroidComposeRule<MainActivity>()
+    val composeTestRule = createAndroidComposeRule<TodoApp>()
 
     @Test
     fun test1() {

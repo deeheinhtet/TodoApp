@@ -28,7 +28,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "android.template"
+        applicationId = "com.dee.todoapp"
         minSdk = 21
         targetSdk = 34
         versionCode = 1
@@ -129,4 +129,7 @@ dependencies {
     androidTestImplementation(libs.androidx.test.core)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.androidx.test.runner)
+
+    implementation(libs.threetenabp)
+    implementation(libs.gson)
 }
